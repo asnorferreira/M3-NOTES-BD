@@ -1,0 +1,58 @@
+LINK <https://generatedata.com/generator>
+CRUD SQL
+
+C - CREATE
+R - READ
+U - UPDATE
+D - DELETE
+
+Inserir registros
+
+-- inserir registros na tabela produtos
+insert into produtos(nome, descricao, preco, categoria) values('Camisa', NULL, 4990, 'Roupas');
+
+-- inserir vários registros de uma só vez 
+insert into produtos(nome, descricao, preco, categoria) 
+values
+('Camisa', NULL, 4990, 'Roupas'),
+('Calça', NULL, 11990, 'Roupas'),
+('Bermuda', NULL, 8990, 'Roupas');
+
+drop table if exists "produtos";
+
+create table "produtos"(
+    id serial primary key,
+    nome varchar(190) default NULL,
+    descricao varchar(190) default NULL,
+    preco integer NULL,
+    categoria varchar(250) default NULL
+);
+
+insert into produtos(nome, descricao, preco, categoria) 
+values
+('Camisa', NULL, 4990, 'Roupas'),
+('Calça', NULL, 11990, 'Roupas'),
+('Bermuda', NULL, 8990, 'Roupas');
+
+update produtos
+set nome = 'Bermuda Azul'
+where id = 2;
+
+update produtos
+set
+nome = 'Regata branca'
+descricao = 'Coleção de verão',
+preco = 20000
+where id = 1;
+
+delete 
+from produtos
+where id = 3;
+
+delete
+from produtos
+where descricao is NULL;
+
+delete
+from produtos
+where descricao is "Coleção de verão";

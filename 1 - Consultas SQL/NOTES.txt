@@ -1,0 +1,35 @@
+LINK <https://generatedata.com/generator>
+SELECT -> É uma palavra reservada SQL utilizada para construir queries de consultas em banco de dados.
+Query -> São trechos de códigos SQL que representam instruções a serem executadas em banco de dados.
+
+ex: SELECT * FROM musicas// SELECT ALL FROM musicas;
+-> Seleciona todos os registros, com todas as colunas, da tabelas musicas;
+ex2: SELECT id, composicao FROM musicas;
+-> Seleciona todos os registros, com as colunas id e composicao, da tabela musicas;
+
+CREATE DATABASE <name> -> cria um banco de dados
+DROP DATABASE <name> -> deleta o banco de dados
+
+DISTINCT -> Diferente de 
+
+WHERE -> Utilizado para filtrar registros
+         Filtra registros que atendem a uma ou várias condições
+         As condições validam expressões lógicas
+    Operadores lógicos:
+    AND - OR - NOT 
+    Operadores de Comparação
+    <(Menor que) / >(Maior que) / <=(Menor ou igual) / >=(Maior ou igual) / =(Igual) / !=(Diferente) / <>(Diferente)
+    Predicados de Comparação
+    BETWEEN - IS NULL - IS NOT NULL
+
+LIMIT -> Estabelece um limite a quantidade de resultados, partindo do primeiro registro, de acordo com a ordenação;
+
+OFFSET -> Ignora os resultados de acordo com a quantidade informada, partindo do primeiro registro;
+
+ORDER BY -> Ordena um ou mais campos de forma ascendente ou descendente. Por padrão a ordenação e ascendente;
+    order by asc
+    order by descendente
+
+LIKE e ILIKE -> É usado para compara um valor cláusula WHERE e permite usar coringas para comparar partes de uma correspondência.
+    Coringa % -> Significa qualquer quantidade de caracteres até sua posição.
+    Coringa _ -> Significa um caractere em sua posição.

@@ -1,0 +1,26 @@
+LINK <https://generatedata.com/generator>
+Funções Nativas
+
+select * from usuarios where idade >= 18;
+->Seleciona todos os registros da tabela usuario, onde o campo idade seja maior ou igual a 18;
+
+select * from count(*) from usuarios where idade >= 18;
+->Retorna quantidade de registros da tabela usuario, onde o campo idade seja maior ou igual a 18;
+
+Dump - conjunto de instruções no postgrees
+link -> https://generatedata.com/
+
+
+COUNT -> A função COUNT em SQL é utilizada para contar a quantidade de linhas que satisfazem determinada condição em uma consulta.
+AS -> A função do Alias em tecnologia, especificamente em SQL, é fornecer um apelido ou nome alternativo para uma coluna ou para o resultado de uma expressão na consulta.
+CONCAT -> A função CONCAT é utilizada para concatenar duas ou mais strings em SQL.
+AVG -> A função AVG em SQL é utilizada para calcular a média de um conjunto de valores.
+ROUND -> A função ROUND em tecnologia, especialmente em SQL, é usada para arredondar um número para um determinado número de casas decimais.
+MIN -> A função MIN em SQL é utilizada para retornar o valor mínimo de um conjunto de valores em uma coluna específica.
+MAX -> Já a função MAX é empregada para retornar o valor máximo de um conjunto de valores em uma coluna específica.
+SUM -> A função SUM em SQL é utilizada para calcular a soma de valores numéricos em uma coluna específica de uma tabela.
+NOW -> A função NOW é utilizada em muitos sistemas de banco de dados para obter a data e hora atuais no momento da execução da consulta.
+CAST -> A função CAST em SQL é utilizada para converter um dado de um tipo para outro.
+AGE -> A função AGE em PostgreSQL é utilizada para calcular a diferença entre duas datas.
+COALESCE -> A função COALESCE em SQL é utilizada para retornar o primeiro valor não nulo de uma lista de expressões.
+GROUP BY -> A função GROUP BY em SQL é utilizada para agrupar linhas que possuem o mesmo valor em uma ou mais colunas, permitindo a realização de operações de agregação, como COUNT, SUM, AVG, entre outras, com base nesse agrupamento.
