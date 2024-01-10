@@ -1,0 +1,100 @@
+-- Modelagem de Dados --
+
+Estruturar tabelas:
+    Definir as entidades do sistema;
+    Identificador único da entidade;
+    Características da entidade;
+    Se a característica for uma lista de dados - criar nova entidade;
+
+Tipos Numéricos
+
+Inteiro:
+      Nome       Tamanho        Alcance
+    smallint   | 2 bytes | -32768 a +32767
+    integer    | 4 bytes | -2,14 x 10^9 a +2,14 x 10^9
+    biginteger | 8 bytes | -9,2 x 10^18 a 9,2 x 10^18
+
+Precisão arbitrária:
+      Nome       Tamanho        Alcance
+    numeric    | variável | 131072 dígitos inteiros; 16383 dígitos decimais.
+    decimal    | variável | 131072 dígitos inteiros; 16383 dígitos decimais.
+    ex: decimal( 7, 4)
+                 |  |
+          precisão  escala
+    123.4567 (precisão: 7, escala: 4)
+    - Se não informar precisão ou escala, suporta até o limite;
+    - Os inteiros podem ser considerados como tendo uma escala de zero;
+
+Ponto flutuante: 
+           Nome        Tamanho        Alcance
+           real      | 4 bytes | 6 dígitos decimais
+    double precision | 8 bytes | 15 dígitos decimais
+    - Não recomendado para: armazenamento e cálculos exatos;
+    - Comparar dois valores de ponto flutuante para igualdade nem sempre funciona conforme o esperado;
+
+Seriais:
+       Nome       Tamanho        Alcance
+    serial      | 2 bytes | 1 a 32767
+    smallserial | 4 bytes | 1 a 2147483647
+    bigserial   | 8 bytes | 1 a 9,22 x 10^18
+    - Não aceita valores negativos ou zero;
+    - Auto incremento
+    - Não nulo
+
+
+Tipos Para Caracteres
+
+varchar (n)
+    - Comprimento variável com limite
+char (n)
+    - Comprimento fixo, completa com espações em branco
+text 
+    - Comprimento variável sem limite
+
+
+Tipo Booleano
+
+Boolean
+    - Tamanho: 1 byte
+    - Possui 3 valores: true, false, null
+    - true, t, yes, on or 1 for true things
+    - false, f, no, off or 0 for false things
+
+
+Tipo para Data e Hora
+       Nome       Tamanho        Alcance
+    timestamp   | 8 bytes | Data e hora sem fuso horário -> 2021-05-20 12:30:45
+    timestamptz | 8 bytes | Data e hora com fuso horário -> 2021-05-20 12:30:45-03
+       date     | 8 bytes | Data sem hora do dia -> 2021-05-20
+       time     | 8 bytes | Hora do dia sem data -> 12:30:45
+       timetz   | 8 bytes | Hora do dia sem data + fuso horário -> 12:30:45-03
+
+
+Relações entre tabelas
+
+(1:N) -> um para muitos, ou seja, a linha da tabela se relaciona com 0 ou mais linhas de outra tabela. Pertencimento
+ex: cidade : condomínios,
+    condomínio : casas, 
+    casa : quartos,
+    quarto : pessoas,
+    pessoa : compras
+
+(1:1) -> um para um, ou seja, a linha de uma tabela se relaciona com uma e apenas uma linha de outra tabela.
+ex: pessoa : telefone,
+    empresa : sede
+
+(N:N) -> muitos para muitos, ou seja, uma linha se relaciona com 0 ou mais linhas de outra tabela e cada linha da tabela A se relaciona com 0 ou mais da tabela B 
+ex: produtos : categorias,
+    pessoas : pessoas
+
+
+Auto relação -> Tabela A relaciona-se com a tabela A
+ex: comentário : comentários
+
+Constraints ou Restrições -> Regras aplicadas em colunas de uma tabela para controlar os datos armazenados
+    - Primary Key (chave primária) : Identificador único de cada registro
+    - Foreign Key (chave estrangeira) : Representa a chave primária em um relacionamento
+    - UNIQUE : Define que o valor da coluna seja único entre os registros
+    - NOT NULL : Impede que uma coluna receba valores nulos
+
+
