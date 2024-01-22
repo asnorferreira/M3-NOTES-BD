@@ -1,0 +1,30 @@
+Conexão PostgreSQL
+node-postegres
+-> npm install pg
+ 
+Utilizamos o pool de client para otimização do tempo de resposta e reutilização de querys
+
+JOIN
+-> Cláusula SQL que permite agrupar registros de duas ou mais tabelas em uma única consulta
+-> INNER JOIN: left table:<includes middle>:right table;
+-> FULL JOIN: left table:<includes all>:right table;
+-> LEFT JOIN: left table:<includes middle and left>:right table;
+-> RIGHT JOIN: left table:<includes middle and right>:right table;
+
+npm install -D watch (dependencies)
+npm install -g watch (Globals)
+
+"dev": "nodemon server.js",
+"dev": "node --watch server.js",
+
+install express and pg
+
+const { Pool } = require('pg');
+
+const pool = new Pool({
+    host: 'localhost',
+    port: ,
+    user: '',
+    password: '',
+    database: '',
+});
