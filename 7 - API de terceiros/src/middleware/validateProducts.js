@@ -1,4 +1,4 @@
-const validateProducts = async (req, res, next) => {
+export const validateProducts = async (req, res, next) => {
   const { nome, valor } = req.body;
 
   if ((!nome || !valor)) {
@@ -8,4 +8,3 @@ const validateProducts = async (req, res, next) => {
   next();
 };
 
-export default validateProducts;

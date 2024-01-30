@@ -1,0 +1,11 @@
+{
+  "cliente_id": 1,           
+  "produto_id": 1,            
+  "quantidade": 2,           
+  "card": {                   
+    "number": "5555555555554444", 
+    "exp_month": 12,           
+    "exp_year": 2029,            
+    "cvc": 123                    
+  }
+}

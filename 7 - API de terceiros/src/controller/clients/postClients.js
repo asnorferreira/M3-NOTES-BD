@@ -1,6 +1,6 @@
 import pool from "../../configs/conection.js";
 
-const postClients = async (req, res) => {
+export const postClients = async (req, res) => {
   const { nome, email, telefone } = req.body;
 
   try {
@@ -27,4 +27,3 @@ const postClients = async (req, res) => {
   }
 };
 
-export default postClients;

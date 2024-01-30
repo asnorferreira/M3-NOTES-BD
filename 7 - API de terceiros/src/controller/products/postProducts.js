@@ -1,6 +1,6 @@
 import pool from "../../configs/conection.js";
 
-const postProducts = async (req, res) => {
+export const postProducts = async (req, res) => {
   const { nome, descricao, valor } = req.body;
 
   try {
@@ -19,4 +19,4 @@ const postProducts = async (req, res) => {
   }
 };
 
-export default postProducts;
+

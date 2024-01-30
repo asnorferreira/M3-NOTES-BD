@@ -1,6 +1,6 @@
 import pool from "../../configs/conection.js";
 
-const getListClients = async (req, res) => {
+export const getListClients = async (req, res) => {
   try {
     const sql = "select * from clientes";
     const listQuery = await pool.query(sql);
@@ -13,4 +13,3 @@ const getListClients = async (req, res) => {
   }
 };
 
-export default getListClients;

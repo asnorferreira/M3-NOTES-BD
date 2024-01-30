@@ -1,10 +1,10 @@
 import pool from "../../configs/conection.js";
 
-const getListProducts = async (req, res) => {
+export const getListProducts = async (req, res) => {
   try {
     const sql =
       "select * from produtos";
-   
+
     const listQuery = await pool.query(sql);
 
     const products = listQuery.rows;
@@ -16,4 +16,4 @@ const getListProducts = async (req, res) => {
   }
 };
 
-export default getListProducts;
+
